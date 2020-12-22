@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Controller front board with 2 button and OLED 16x2"
-Date "2020-10-29"
-Rev "0.1"
+Date "2020-12-22"
+Rev "0.2"
 Comp "SQ8KFH"
 Comment1 ""
 Comment2 ""
@@ -61,8 +61,6 @@ Text Label 3400 3200 2    50   ~ 0
 PB7(SCK)
 Text Label 3400 4500 2    50   ~ 0
 PD0
-Text Label 3400 4300 2    50   ~ 0
-PB5(INT2)
 Text Label 3400 4000 2    50   ~ 0
 PC7(D2A)
 Text Label 3400 4200 2    50   ~ 0
@@ -107,8 +105,6 @@ Wire Wire Line
 	3400 4000 2950 4000
 Wire Wire Line
 	3400 4200 2950 4200
-Wire Wire Line
-	2950 4300 3400 4300
 Wire Wire Line
 	3400 4400 2950 4400
 $Comp
@@ -283,13 +279,11 @@ F 3 "~" H 7750 4800 50  0001 C CNN
 	1    7750 4800
 	0    1    1    0   
 $EndComp
-Text Label 7450 3600 0    50   ~ 0
+Text Label 7450 4250 0    50   ~ 0
 PB4
-Text Label 7475 3050 0    50   ~ 0
-PB5(INT2)
 Text Label 7450 4800 0    50   ~ 0
 PB6
-Text Label 7450 4250 0    50   ~ 0
+Text Label 7450 3600 0    50   ~ 0
 PD0
 Wire Wire Line
 	7450 4800 7650 4800
@@ -366,7 +360,7 @@ Wire Wire Line
 	8000 3000 8000 3050
 Connection ~ 8000 3050
 Wire Wire Line
-	7475 3050 8000 3050
+	7450 3050 8000 3050
 Wire Wire Line
 	7450 4250 8000 4250
 $Comp
@@ -395,7 +389,7 @@ F 3 "" H 8000 3950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8000 3950 8000 4000
-NoConn ~ 2950 4100
+NoConn ~ 2950 4300
 NoConn ~ 2950 4600
 $Comp
 L power:+5V #PWR0101
@@ -445,4 +439,10 @@ Wire Wire Line
 	3000 6500 3000 6750
 Wire Wire Line
 	3500 6500 3500 6750
+Text Label 3400 4100 2    50   ~ 0
+PB3
+Wire Wire Line
+	3400 4100 2950 4100
+Text Label 7450 3050 0    50   ~ 0
+PB3
 $EndSCHEMATC
